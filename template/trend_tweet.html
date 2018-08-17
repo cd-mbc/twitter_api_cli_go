@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Trend tweets</h1>
+    <ul>
+      {{ range . }}
+        <li>
+          <ul>
+            <li>{{ .Text }}</li>
+            <li>{{ .Created_at }}</li>
+          </ul>
+        </li>
+      {{ end }}
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitter Trends</title>
+  </head>
+  <body>
+    <h1>Twitter Trend List</h1>
+    <ul>
+      {{ range . }}
+        <li>
+          <ul>
+            <li>{{ .Name }}</li>
+            <li>{{ .Tweet_volume }}</li>
+            <li><a href="/trend_tweet?name={{ .Name }}">詳しく調べる</a></li>
+          </ul>
+        </li>
+      {{ end }}
+    </ul>
+  </body>
+</html>
